@@ -39,7 +39,7 @@ const SFX=(()=>{
  let bgmStarted=false,bgmTargetVolume=.35;
  function fadeBgm(to,dur=1200){
   const from=bgm.volume,t0=performance.now();
-  function step(now){const p=Math.min(1,(now-t0)/dur);bgm.volume=from+(to-from)*p;if(p<1)requestAnimationFrame(step)}
+  function step(now){const p=Math.max(0,Math.min(1,(now-t0)/dur));bgm.volume=Math.max(0,Math.min(1,from+(to-from)*p));if(p<1)requestAnimationFrame(step)}
   requestAnimationFrame(step);
  }
  function startBgm(){
@@ -69,3 +69,5 @@ const SFX=(()=>{
 })();
 document.addEventListener('pointerdown',()=>SFX.unlock(),{once:true});
 document.addEventListener('keydown',()=>SFX.unlock(),{once:true});
+document.addEventListener('touchend',()=>SFX.unlock(),{once:true});
+document.addEventListener('click',()=>SFX.unlock(),{once:true});
