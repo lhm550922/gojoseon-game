@@ -12,7 +12,7 @@ const juniorLessons=[
 {text:'',question:'신화에는 곰이 사람인 웅녀로 변했다고 나와요. 실제로는 어떤 일을 나타낸 이야기일까요?',answers:['환웅의 부족과 곰 부족이 만난 일','곰이 진짜 사람으로 변한 일','호랑이가 먼저 사람이 된 일'],why:'곰이 웅녀가 되었다는 이야기는, 곰 부족과 환웅의 부족이 만나 함께 살게 된 것을 뜻하는 해석이에요. 실제로 동물이 사람으로 변한 것은 아니에요.'},
 {text:'환웅과 웅녀 사이에서 태어난 단군왕검이 자라 고조선을 세웠다고 전해요.',question:'고조선을 세운 사람은 누구라고 전해질까요?',answers:['단군왕검','호랑이','풍백'],correct:0,why:'환웅과 웅녀 사이에서 태어난 단군왕검이 고조선을 세웠다고 전해요.'},
 {text:'옛사람들이 남긴 물건과 글을 함께 살펴봐요.',question:'옛날 일을 어떻게 알아볼까요?',answers:['게임만 보고 정해요','신화를 모두 사실로 믿어요','옛 물건과 글을 함께 봐요'],why:'여러 가지 자료를 살펴보면 옛날 일을 더 잘 알 수 있어요.'},
-{text:'개천절은 고조선의 건국을 기념하는 날이에요.',question:'개천절은 언제일까요?',answers:['10월 3일','10월 9일','8월 15일'],why:'개천절은 10월 3일이에요. 한글날은 10월 9일이에요.'}];
+{text:'개천절은 고조선의 건국을 기념하는 날이에요.',question:'개천절은 언제일까요?',answers:['10월 3일','10월 9일','8월 15일'],why:'개천절은 10월 3일이에요.'}];
 function configureGrade(grade){
  STAGES.splice(0,STAGES.length,...structuredClone(originalStages));lessons.splice(0,lessons.length,...structuredClone(originalLessons));
  Object.assign(STAGES[2],{title:'두 부족과 맺는 약속',desc:'곰 부족과 호랑이 부족을 맞이하고, 식량 나눔·대화·공동체 약속을 차례로 진행해요.',label:'웅녀 이야기 · 부족의 만남으로 해석하기',story:'어느 날 곰 부족과 호랑이 부족이 신시를 찾아왔다.\n서로 다른 두 부족이었지만, 함께 살아갈 길을 찾아 나섰다.',note:'부족의 만남은 신화를 해석하는 관점이에요. 아래의 만남과 약속 미션은 게임용 창작이에요.',lessons:[2]});
@@ -87,7 +87,7 @@ const baseJournal=journal;journal=function(){baseJournal();$('#modalBody').inner
 const baseAdvance=advance;advance=function(){
  if(s.timeUp&&!s.finished&&!objectives().every(o=>o.now>=o.goal)){
   quizQueue=[...STAGES[s.stage].lessons];quizIndex=0;
-  quizDone=()=>{if(s.stage<4){$('#modal').close();enterStage();}else{s.food=Math.max(0,s.food-300);s.finished=true;render();ending();}};
+  quizDone=()=>{if(s.stage<4){$('#modal').close();enterStage();}else{s.food=Math.max(0,s.food-1000);s.finished=true;render();ending();}};
   showQuiz();return;
  }
  baseAdvance();
