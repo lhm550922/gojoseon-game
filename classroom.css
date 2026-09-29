@@ -28,13 +28,14 @@
 .tribe-member.m3{left:22px;top:26px}
 .tribe-member.m4{left:52px;top:24px}
 .tribe-group b{position:absolute;left:50%;bottom:-19px;transform:translateX(-50%);font-size:11px;background:#fff3ca;color:#503719;padding:3px 6px;border-radius:5px;white-space:nowrap;z-index:2}
+.tribe-group.arrived::before{content:'';position:absolute;left:-18px;right:-18px;top:-12px;bottom:2px;background:rgba(8,18,14,.46);border-radius:22px;box-shadow:0 6px 20px rgba(0,0,0,.35),inset 0 0 0 1px rgba(255,255,255,.14);z-index:-1;pointer-events:none}
 #tribeBubble{position:absolute;left:47%;top:60%;transform:translateX(-50%);pointer-events:auto;background:#fff6da;color:#4a2e12;border:3px solid #e3352b;border-radius:24px;padding:13px 26px;font:800 16px 'Noto Sans KR',sans-serif;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.45),0 0 0 5px #e3352b30;cursor:pointer;animation:tribe-bubble-pulse 1.2s ease-in-out infinite;z-index:9}
 #tribeBubble:after{content:'';position:absolute;left:50%;bottom:-9px;transform:translateX(-50%);border:9px solid transparent;border-top-color:#fff6da}
 #tribeBubble:disabled{cursor:default;animation:none;opacity:.95;background:#efe6d2;color:#6b5b3d;border-color:#c9b98a}
 #tribeBubble:disabled:after{border-top-color:#efe6d2}
 #tribeBubble.done{background:#e5f1e0;border-color:#4f8a5a;color:#2c5c33}
 #tribeBubble.done:after{border-top-color:#e5f1e0}
-.tribe-talk-btn{position:absolute;left:50%;bottom:-68px;transform:translateX(-50%);pointer-events:auto;background:#fff6da;color:#4a2e12;border:3px solid #e3a72b;border-radius:22px;padding:10px 20px;font:800 14px 'Noto Sans KR',sans-serif;white-space:nowrap;box-shadow:0 8px 22px rgba(0,0,0,.45),0 0 0 5px #e3a72b2e;cursor:pointer;animation:tribe-bubble-pulse 1.2s ease-in-out infinite;z-index:9}
+.tribe-talk-btn{position:absolute;left:62%;bottom:-68px;transform:translateX(-50%);pointer-events:auto;background:#fff6da;color:#4a2e12;border:3px solid #e3a72b;border-radius:22px;padding:10px 20px;font:800 14px 'Noto Sans KR',sans-serif;white-space:nowrap;box-shadow:0 8px 22px rgba(0,0,0,.45),0 0 0 5px #e3a72b2e;cursor:pointer;animation:tribe-bubble-pulse 1.2s ease-in-out infinite;z-index:9}
 .tribe-talk-btn:after{content:'';position:absolute;left:50%;top:-9px;transform:translateX(-50%);border:9px solid transparent;border-bottom-color:#fff6da}
 .tribe-thinking{position:absolute;left:50%;top:22%;transform:translateX(-50%);background:#2c4a3ce6;color:#fff6da;border:2px solid #f1c77690;border-radius:20px;padding:10px 22px;font:800 15px 'Noto Sans KR',sans-serif;box-shadow:0 8px 22px rgba(0,0,0,.4);z-index:9;pointer-events:none}
 .tribe-thinking .dots span{display:inline-block;animation:dot-blink 1.3s infinite;opacity:.25}
